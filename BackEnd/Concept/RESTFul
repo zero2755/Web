@@ -1,0 +1,22 @@
+RESTful
+
+REST
+=> Representational State Transfer
+자원을 이름(자원의표현)으로 구분하여 해당 자원의 상태(정보)를 주고
+받는 모든 것을 의미한다
+=>자원의 표현에 의한 상태전달
+=>자원:해당소프트웨어가 관리하는 모든것
+=>상태(정보) 전달 => 데이터가 요청되어지는 시점에서 자원의 상태(정보)를 전달한다
+=>JSON, XML등을 통해
+
+HTTP URI(Uniform Resource Identifier)를 통해 자원(리소스)를 명시하고,
+HTTP 메소드(POST,Get,Put,DELETE)를 통해 해당 자원에대한 CRUD 연산을 적용하는것
+
+REST의 특징
+
+1.서버 클라이언트 구조
+2무상태(StateLess)
+3캐시처리가능
+4계층화
+5Code On Demand
+6Uniform Interface(인터페이스 일관성)
