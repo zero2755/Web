@@ -1,0 +1,33 @@
+Spring설정의 어려움을 개선하기위한 것
+
+auto-configuration(스붓에서 가장 중요한 특징, 빌드하고자 하는 앱에서 필요로 하는 컴퍼넌트를 자동으로 설정해줌), 
+=> classpass를 체크함, thymeleaf를 예로들면 타임리프템플릿리졸버,뷰리졸버,템플릿엔진이 해당 의존성을 자동으로 지정
+임베디드톰캣
+starter-dependencies
+Actuator
+Spring Bott CLI
+
+
+Starter dependency
+=> 스프링부트에서 의존성 관리 문제를 해결해주는 역할, starter가 Maven이나 Gradle파일에 등록한 의존성jar를 자동으로 프로젝트에 로드해줌,
+spring-boot-stater-web의 의존성을 추가하면, Spring MVC Jar를 프로젝트에 Import한다 
+
+
+
+
+
+1. 임베디드톰캣
+2. pom.xml에서 의존 라이브러리 버전을 일일히 지정하지 않아도됨( 등록 라이브러리에 한해 스프링 부트가 권장 버전 관리)
+3. @SpringBootapplication 어노테이션으로 xml대체 => @ComponentScan(프로젝트에있는 Bean찾아서등록)과 @EnableAutoConfiguration(클래스패스내 의존성관련자동설정)을 포함
+4.ContextLoaderListener, DispatcherServlet, CharacterEncodingFilter 설정 불필요
+
+장점 : 편리함과 생산성이 이점임 start dependency는 다른 공통 라이브러리를 자동으로 import해줌
+
+
+
+스프링부트 Spring MVC과의차이점
+둘다 스프링 프레임워크의 범주에 포함되지만, 스프링MVC는 MVC디자인패턴을 사용하는 일관된 구조를 제공함으로써 웹개발을 쉽게 도와줌,
+스프링부트는 Spring MVC에더해 Spring에서의 의존성관리, 설정을 더 쉽게 하도록 도와줌
+
+core 스프링?
+=>Core Spring은 Dependency Injection과 Inversion of Control을 제공하는 것  
